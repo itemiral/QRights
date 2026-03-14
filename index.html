@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QRights — Kyrgyzstan Constitution</title>
+    <meta
+      name="description"
+      content="QR-based access to your legal rights (Kyrgyzstan Constitution) — pick your case and view relevant rights."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="siteHeader">
+      <div class="container headerRow">
+        <a class="brand" href="./index.html" aria-label="QRights home">
+          <span class="brandMark" aria-hidden="true">QR</span>
+          <span class="brandText">QRights</span>
+        </a>
+        <nav class="topNav" aria-label="Top navigation">
+          <a class="topNavLink" href="#cases">Cases</a>
+          <a class="topNavLink" href="#about">About</a>
+          <details class="langPicker">
+            <summary aria-label="Pick a language">Pick a language</summary>
+            <div class="langMenu" role="menu" aria-label="Language menu">
+              <a class="langLink" role="menuitem" href="./index.html">English</a>
+              <a class="langLink" role="menuitem" href="./ru/index.html">Русский</a>
+              <a class="langLink" role="menuitem" href="./ky/index.html">Кыргызча</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="heroText">
+          <h1>QR-based access to your legal rights.</h1>
+          <p class="lead">
+            Pick what happened, then view a simple summary of constitutional rights relevant to that case
+            (Kyrgyz Republic).
+          </p>
+        </div>
+
+        <div class="heroCard" id="about">
+          <h2 class="cardTitle">Quick access</h2>
+          <p class="muted">
+            Scan this QR code to open the home page on a phone.
+          </p>
+          <div class="qrWrap" id="qr" aria-label="QR code to this page"></div>
+          <button class="btnSecondary" type="button" id="copyLink">Copy link</button>
+        </div>
+      </section>
+
+      <section class="cases" id="cases" aria-label="Cases">
+        <h2>What is your case?</h2>
+        <div class="caseGrid">
+          <a class="caseButton" href="./cases/detention.html">
+            <span class="caseTitle">Police stop / detention</span>
+            <span class="caseSubtitle">If you were stopped, searched, taken to a station, or questioned</span>
+          </a>
+
+          <a class="caseButton" href="./cases/speech.html">
+            <span class="caseTitle">Speech / assembly</span>
+            <span class="caseSubtitle">If you posted online, protested, or were told you can’t speak</span>
+          </a>
+
+          <a class="caseButton" href="./cases/workplace.html">
+            <span class="caseTitle">Workplace issue</span>
+            <span class="caseSubtitle">If you faced discrimination, unsafe conditions, or unfair treatment</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footerInner">
+          <p class="muted small">
+            QRights — IGCSE Global Perspectives project (Kyrgyzstan Constitution).
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- QR library (CDN) + local logic -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
